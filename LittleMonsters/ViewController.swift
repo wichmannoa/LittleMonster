@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var monsterImg: MonsterImg!
     @IBOutlet weak var foodImg: DragImg!
     @IBOutlet weak var heartImg: DragImg!
+    @IBOutlet weak var hammerImg: DragImg!
     
     @IBOutlet weak var lblPlayAgain: UILabel!
     @IBOutlet weak var btnPlayAgain: UIButton!
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
     var sfxHeart: AVAudioPlayer!
     var sfxDeath: AVAudioPlayer!
     var sfxSkull: AVAudioPlayer!
+    var sfxHammer: AVAudioPlayer!
     
     
     
@@ -61,6 +63,8 @@ class ViewController: UIViewController {
             
             try sfxDeath = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("death", ofType: "wav")!))
             
+            try sfxHammer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("hammer2", ofType: "wav")!))
+            
             musicPlayer.prepareToPlay()
             musicPlayer.play()
             
@@ -68,6 +72,7 @@ class ViewController: UIViewController {
             sfxDeath.prepareToPlay()
             sfxHeart.prepareToPlay()
             sfxSkull.prepareToPlay()
+            sfxHammer.prepareToPlay()
             
         }catch let err as NSError{
             print(err.debugDescription)
@@ -85,11 +90,15 @@ class ViewController: UIViewController {
         foodImg.userInteractionEnabled = false
         heartImg.alpha = DIM_ALPHA
         heartImg.userInteractionEnabled = false
+        hammerImg.alpha = DIM_ALPHA
+        hammerImg.userInteractionEnabled = false
         
         if currentItem == 0 {
             sfxHeart.play()
-        }else{
+        }else if currentItem == 1{
             sfxBite.play()
+        } else {
+            sfxHammer.play()
         }
     }
     
@@ -109,36 +118,55 @@ class ViewController: UIViewController {
         penalties++
             sfxSkull.play()
         if penalties == 1 {
-            penalty1Img.alpha = OPAQUE
-            penalty2Img.alpha = DIM_ALPHA
-        } else if penalties == 2{
-            penalty2Img.alpha = OPAQUE
-            penalty3Img.alpha = DIM_ALPHA
-        } else if penalties >= 3 {
-            penalty3Img.alpha = OPAQUE
-        } else {
-            penalty1Img.alpha = DIM_ALPHA
-            penalty2Img.alpha = DIM_ALPHA
-            penalty3Img.alpha = DIM_ALPHA
+                penalty1Img.alpha = OPAQUE
+                penalty2Img.alpha = DIM_ALPHA
+            } else if penalties == 2{
+                penalty2Img.alpha = OPAQUE
+                penalty3Img.alpha = DIM_ALPHA
+            } else if penalties >= 3 {
+                penalty3Img.alpha = OPAQUE
+            } else {
+                penalty1Img.alpha = DIM_ALPHA
+                penalty2Img.alpha = DIM_ALPHA
+                penalty3Img.alpha = DIM_ALPHA
+            }
+            if penalties >= MAX_PENALTIES {
+                gameOver()
+            }
         }
-        if penalties >= MAX_PENALTIES {
-            gameOver()
-        }
-        }
-        let rand = arc4random_uniform(2)
+        
+        let rand = arc4random_uniform(3)
         if rand == 0 {
             foodImg.alpha = DIM_ALPHA
             foodImg.userInteractionEnabled = false
             
             heartImg.alpha = OPAQUE
             heartImg.userInteractionEnabled = true;
-        }else{
+            
+            hammerImg.alpha = DIM_ALPHA
+            hammerImg.userInteractionEnabled = false;
+        }else if rand == 1{
             heartImg.alpha = DIM_ALPHA
             heartImg.userInteractionEnabled = false
             
             foodImg.alpha = OPAQUE
             foodImg.userInteractionEnabled = true;
+            
+            hammerImg.alpha = DIM_ALPHA
+            hammerImg.userInteractionEnabled = false;
+        } else {
+            foodImg.alpha = DIM_ALPHA
+            foodImg.userInteractionEnabled = false
+            
+            heartImg.alpha = DIM_ALPHA
+            heartImg.userInteractionEnabled = false;
+            
+            hammerImg.alpha = OPAQUE
+            hammerImg.userInteractionEnabled = true;
+            
         }
+        
+        
         currentItem = rand
         monsterHappy = false
     }
@@ -163,6 +191,7 @@ class ViewController: UIViewController {
     func gameInit(){
         foodImg.dropTarget = monsterImg;
         heartImg.dropTarget = monsterImg;
+        hammerImg.dropTarget = monsterImg;
         
         penalty1Img.alpha = DIM_ALPHA
         penalty2Img.alpha = DIM_ALPHA

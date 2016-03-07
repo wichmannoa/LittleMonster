@@ -20,6 +20,8 @@
 		276B882D1C8D453E00F0B1FD /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276B88281C8D453E00F0B1FD /* heart.wav */; };
 		276B882E1C8D453E00F0B1FD /* skull.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276B88291C8D453E00F0B1FD /* skull.wav */; };
 		276B88301C8DCB7800F0B1FD /* jiimager.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 276B882F1C8DCB7800F0B1FD /* jiimager.ttf */; };
+		276B88321C8DD96300F0B1FD /* hammer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276B88311C8DD96300F0B1FD /* hammer.wav */; };
+		276B88341C8DDCEF00F0B1FD /* hammer2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276B88331C8DDCEF00F0B1FD /* hammer2.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		276B88281C8D453E00F0B1FD /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
 		276B88291C8D453E00F0B1FD /* skull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skull.wav; sourceTree = "<group>"; };
 		276B882F1C8DCB7800F0B1FD /* jiimager.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jiimager.ttf; sourceTree = "<group>"; };
+		276B88311C8DD96300F0B1FD /* hammer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hammer.wav; sourceTree = "<group>"; };
+		276B88331C8DDCEF00F0B1FD /* hammer2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hammer2.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +85,10 @@
 				276B88261C8D453E00F0B1FD /* cave-music.mp3 */,
 				276B88271C8D453E00F0B1FD /* death.wav */,
 				276B88281C8D453E00F0B1FD /* heart.wav */,
+				276B88331C8DDCEF00F0B1FD /* hammer2.wav */,
 				276B882F1C8DCB7800F0B1FD /* jiimager.ttf */,
 				276B88291C8D453E00F0B1FD /* skull.wav */,
+				276B88311C8DD96300F0B1FD /* hammer.wav */,
 				276B88231C8CFEEE00F0B1FD /* monsterImg.swift */,
 			);
 			path = LittleMonsters;
@@ -147,12 +153,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276B88321C8DD96300F0B1FD /* hammer.wav in Resources */,
 				276B882E1C8D453E00F0B1FD /* skull.wav in Resources */,
 				276B882A1C8D453E00F0B1FD /* bite.wav in Resources */,
 				276B882C1C8D453E00F0B1FD /* death.wav in Resources */,
 				276B88301C8DCB7800F0B1FD /* jiimager.ttf in Resources */,
 				276B882D1C8D453E00F0B1FD /* heart.wav in Resources */,
 				276B882B1C8D453E00F0B1FD /* cave-music.mp3 in Resources */,
+				276B88341C8DDCEF00F0B1FD /* hammer2.wav in Resources */,
 				276B881A1C8C06A100F0B1FD /* LaunchScreen.storyboard in Resources */,
 				276B88171C8C06A100F0B1FD /* Assets.xcassets in Resources */,
 				276B88151C8C06A100F0B1FD /* Main.storyboard in Resources */,

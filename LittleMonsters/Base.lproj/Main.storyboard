@@ -78,17 +78,27 @@
                                     <rect key="frame" x="94" y="453" width="421" height="302"/>
                                 </variation>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="AfM-WW-HgD">
-                                <rect key="frame" x="170" y="100" width="290" height="98"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AfM-WW-HgD">
+                                <rect key="frame" x="170" y="100" width="290" height="90"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="iWh-lB-ixo" customClass="DragImg" customModule="LittleMonsters" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="90"/>
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
+                                        </variation>
+                                    </imageView>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="halloween_hammer_512" translatesAutoresizingMaskIntoConstraints="NO" id="PV8-Wf-ibn" customClass="DragImg" customModule="LittleMonsters" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="0.0" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="mhZ-d3-G3Q"/>
+                                            <constraint firstAttribute="height" constant="90" id="rDb-fY-Sta"/>
+                                        </constraints>
                                         <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
                                         </variation>
                                     </imageView>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="vS3-wF-4L0" customClass="DragImg" customModule="LittleMonsters" customModuleProvider="target">
-                                        <rect key="frame" x="195" y="0.0" width="95" height="98"/>
+                                        <rect key="frame" x="195" y="0.0" width="95" height="90"/>
                                         <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="195" y="0.0" width="95" height="98"/>
                                         </variation>
@@ -278,6 +288,7 @@
                     <connections>
                         <outlet property="btnPlayAgain" destination="ODg-b4-2lN" id="UhW-VV-nb6"/>
                         <outlet property="foodImg" destination="vS3-wF-4L0" id="m4u-Ct-oiX"/>
+                        <outlet property="hammerImg" destination="PV8-Wf-ibn" id="dUP-9V-6mN"/>
                         <outlet property="heartImg" destination="iWh-lB-ixo" id="t13-A3-kId"/>
                         <outlet property="lblPlayAgain" destination="Df1-IN-A2P" id="zen-by-6VP"/>
                         <outlet property="monsterImg" destination="wqn-fC-e4u" id="K3P-7c-AQg"/>
@@ -295,6 +306,7 @@
         <image name="bg" width="768" height="1024"/>
         <image name="food" width="95" height="98"/>
         <image name="ground" width="1444" height="151"/>
+        <image name="halloween_hammer_512" width="512" height="512"/>
         <image name="heart" width="95" height="98"/>
         <image name="idle1" width="889" height="615"/>
         <image name="livespanel" width="468" height="137"/>
