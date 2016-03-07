@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="jiimager.ttf">
+            <string>JI-Imager</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -143,6 +148,19 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODg-b4-2lN">
+                                <rect key="frame" x="194" y="261" width="212" height="78"/>
+                                <state key="normal" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="onBtnPlayAgainTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PbZ-dD-O0i"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PLAY AGAIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df1-IN-A2P">
+                                <rect key="frame" x="222" y="281" width="154" height="37"/>
+                                <fontDescription key="fontDescription" name="JI-Imager" family="Lantern" pointSize="40"/>
+                                <color key="textColor" red="0.93866398360000003" green="0.82233344789999996" blue="0.02907289184" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -156,6 +174,7 @@
                             <constraint firstItem="fCQ-uH-kdi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CwV-ng-OGh"/>
                             <constraint firstItem="AfM-WW-HgD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DPZ-z3-hF7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fCQ-uH-kdi" secondAttribute="bottom" id="FdU-QB-83Q"/>
+                            <constraint firstItem="ODg-b4-2lN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gna-af-hai"/>
                             <constraint firstItem="AfM-WW-HgD" firstAttribute="top" secondItem="wK3-UU-3jJ" secondAttribute="bottom" constant="8" id="HgW-Ir-3V5">
                                 <variation key="heightClass=regular-widthClass=compact" constant="50"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="50"/>
@@ -171,13 +190,16 @@
                             </constraint>
                             <constraint firstItem="1ZF-0Z-JQA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="V0V-eh-fUp"/>
                             <constraint firstItem="vjH-Pg-i8T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VVM-b9-owR"/>
+                            <constraint firstItem="Df1-IN-A2P" firstAttribute="centerY" secondItem="ODg-b4-2lN" secondAttribute="centerY" id="Wg6-PZ-gl8"/>
                             <constraint firstItem="wqn-fC-e4u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="94" id="XDJ-Py-UCs">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="Df1-IN-A2P" firstAttribute="centerX" secondItem="ODg-b4-2lN" secondAttribute="centerX" id="XWk-vp-8SO"/>
                             <constraint firstItem="wK3-UU-3jJ" firstAttribute="centerX" secondItem="vjH-Pg-i8T" secondAttribute="centerX" id="Ypf-Mf-oWV"/>
                             <constraint firstItem="vjH-Pg-i8T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cIr-Pp-jmL">
                                 <variation key="heightClass=regular-widthClass=compact" constant="50"/>
                             </constraint>
+                            <constraint firstItem="ODg-b4-2lN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gMY-Hc-t9x"/>
                             <constraint firstItem="AfM-WW-HgD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gnl-CP-98l"/>
                             <constraint firstItem="wK3-UU-3jJ" firstAttribute="centerX" secondItem="vjH-Pg-i8T" secondAttribute="centerX" id="icb-gd-AxM"/>
                             <constraint firstItem="1ZF-0Z-JQA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kjh-kh-rim"/>
@@ -201,10 +223,6 @@
                             <mask key="constraints">
                                 <exclude reference="6v6-0z-VCb"/>
                                 <exclude reference="rVr-A2-mXW"/>
-                                <exclude reference="AGo-gJ-DB1"/>
-                                <exclude reference="Ypf-Mf-oWV"/>
-                                <exclude reference="icb-gd-AxM"/>
-                                <exclude reference="mPj-8P-Lia"/>
                                 <exclude reference="3Cu-ka-jxb"/>
                                 <exclude reference="8CS-Fp-gjo"/>
                                 <exclude reference="DPZ-z3-hF7"/>
@@ -213,6 +231,10 @@
                                 <exclude reference="p1S-4d-SuR"/>
                                 <exclude reference="pdF-3u-drX"/>
                                 <exclude reference="qKt-0X-96A"/>
+                                <exclude reference="AGo-gJ-DB1"/>
+                                <exclude reference="Ypf-Mf-oWV"/>
+                                <exclude reference="icb-gd-AxM"/>
+                                <exclude reference="mPj-8P-Lia"/>
                                 <exclude reference="7CD-od-2Cl"/>
                                 <exclude reference="I6C-ap-bqn"/>
                                 <exclude reference="Sn5-ae-zp2"/>
@@ -226,13 +248,13 @@
                                 <exclude reference="VVM-b9-owR"/>
                                 <exclude reference="cIr-Pp-jmL"/>
                                 <include reference="rVr-A2-mXW"/>
+                                <exclude reference="HgW-Ir-3V5"/>
+                                <include reference="pdF-3u-drX"/>
+                                <include reference="qKt-0X-96A"/>
                                 <include reference="AGo-gJ-DB1"/>
                                 <include reference="Ypf-Mf-oWV"/>
                                 <exclude reference="icb-gd-AxM"/>
                                 <exclude reference="mPj-8P-Lia"/>
-                                <exclude reference="HgW-Ir-3V5"/>
-                                <include reference="pdF-3u-drX"/>
-                                <include reference="qKt-0X-96A"/>
                                 <include reference="Sn5-ae-zp2"/>
                                 <exclude reference="XDJ-Py-UCs"/>
                             </mask>
@@ -254,8 +276,10 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btnPlayAgain" destination="ODg-b4-2lN" id="UhW-VV-nb6"/>
                         <outlet property="foodImg" destination="vS3-wF-4L0" id="m4u-Ct-oiX"/>
                         <outlet property="heartImg" destination="iWh-lB-ixo" id="t13-A3-kId"/>
+                        <outlet property="lblPlayAgain" destination="Df1-IN-A2P" id="zen-by-6VP"/>
                         <outlet property="monsterImg" destination="wqn-fC-e4u" id="K3P-7c-AQg"/>
                         <outlet property="penalty1Img" destination="07h-wt-p9r" id="dNl-Hs-8YV"/>
                         <outlet property="penalty2Img" destination="xeh-x8-Bvm" id="g7f-4D-hUN"/>
@@ -274,6 +298,7 @@
         <image name="heart" width="95" height="98"/>
         <image name="idle1" width="889" height="615"/>
         <image name="livespanel" width="468" height="137"/>
+        <image name="player1attackbtn" width="212" height="78"/>
         <image name="skull" width="95" height="98"/>
     </resources>
 </document>

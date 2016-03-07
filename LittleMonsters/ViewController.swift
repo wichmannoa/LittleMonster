@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var foodImg: DragImg!
     @IBOutlet weak var heartImg: DragImg!
     
+    @IBOutlet weak var lblPlayAgain: UILabel!
+    @IBOutlet weak var btnPlayAgain: UIButton!
     @IBOutlet weak var penalty1Img: UIImageView!
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
@@ -41,12 +43,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        foodImg.dropTarget = monsterImg;
-        heartImg.dropTarget = monsterImg;
-        
-        penalty1Img.alpha = DIM_ALPHA
-        penalty2Img.alpha = DIM_ALPHA
-        penalty3Img.alpha = DIM_ALPHA
+        gameInit()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped:", object: nil)
         
@@ -150,7 +147,26 @@ class ViewController: UIViewController {
         timer.invalidate()
         monsterImg.playDeathAnimation()
         sfxDeath.play()
+        btnPlayAgain.hidden = false
+        lblPlayAgain.hidden = false
+    }
+    
+    @IBAction func onBtnPlayAgainTapped(sender: AnyObject) {
+        btnPlayAgain.hidden = true
+        lblPlayAgain.hidden = true
+        startTimer()
+        monsterImg.playIdleAnimation()
+        penalties = 0;
+        gameInit()
+    }
+    
+    func gameInit(){
+        foodImg.dropTarget = monsterImg;
+        heartImg.dropTarget = monsterImg;
         
+        penalty1Img.alpha = DIM_ALPHA
+        penalty2Img.alpha = DIM_ALPHA
+        penalty3Img.alpha = DIM_ALPHA
     }
     
 
