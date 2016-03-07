@@ -22,6 +22,8 @@
 		276B88301C8DCB7800F0B1FD /* jiimager.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 276B882F1C8DCB7800F0B1FD /* jiimager.ttf */; };
 		276B88321C8DD96300F0B1FD /* hammer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276B88311C8DD96300F0B1FD /* hammer.wav */; };
 		276B88341C8DDCEF00F0B1FD /* hammer2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276B88331C8DDCEF00F0B1FD /* hammer2.wav */; };
+		276B88381C8DE1B900F0B1FD /* Playing.png in Resources */ = {isa = PBXBuildFile; fileRef = 276B88361C8DE1B900F0B1FD /* Playing.png */; };
+		276B88391C8DE1B900F0B1FD /* PlayAgain.png in Resources */ = {isa = PBXBuildFile; fileRef = 276B88371C8DE1B900F0B1FD /* PlayAgain.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		276B882F1C8DCB7800F0B1FD /* jiimager.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jiimager.ttf; sourceTree = "<group>"; };
 		276B88311C8DD96300F0B1FD /* hammer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hammer.wav; sourceTree = "<group>"; };
 		276B88331C8DDCEF00F0B1FD /* hammer2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hammer2.wav; sourceTree = "<group>"; };
+		276B88361C8DE1B900F0B1FD /* Playing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Playing.png; sourceTree = "<group>"; };
+		276B88371C8DE1B900F0B1FD /* PlayAgain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayAgain.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		276B880E1C8C06A100F0B1FD /* LittleMonsters */ = {
 			isa = PBXGroup;
 			children = (
+				276B88351C8DE1A900F0B1FD /* images */,
 				276B880F1C8C06A100F0B1FD /* AppDelegate.swift */,
 				276B88111C8C06A100F0B1FD /* ViewController.swift */,
 				276B88131C8C06A100F0B1FD /* Main.storyboard */,
@@ -92,6 +97,15 @@
 				276B88231C8CFEEE00F0B1FD /* monsterImg.swift */,
 			);
 			path = LittleMonsters;
+			sourceTree = "<group>";
+		};
+		276B88351C8DE1A900F0B1FD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				276B88361C8DE1B900F0B1FD /* Playing.png */,
+				276B88371C8DE1B900F0B1FD /* PlayAgain.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,11 +168,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				276B88321C8DD96300F0B1FD /* hammer.wav in Resources */,
+				276B88381C8DE1B900F0B1FD /* Playing.png in Resources */,
 				276B882E1C8D453E00F0B1FD /* skull.wav in Resources */,
 				276B882A1C8D453E00F0B1FD /* bite.wav in Resources */,
 				276B882C1C8D453E00F0B1FD /* death.wav in Resources */,
 				276B88301C8DCB7800F0B1FD /* jiimager.ttf in Resources */,
 				276B882D1C8D453E00F0B1FD /* heart.wav in Resources */,
+				276B88391C8DE1B900F0B1FD /* PlayAgain.png in Resources */,
 				276B882B1C8D453E00F0B1FD /* cave-music.mp3 in Resources */,
 				276B88341C8DDCEF00F0B1FD /* hammer2.wav in Resources */,
 				276B881A1C8C06A100F0B1FD /* LaunchScreen.storyboard in Resources */,
